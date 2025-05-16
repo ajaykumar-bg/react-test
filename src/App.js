@@ -1,5 +1,5 @@
 import "./App.css";
-import ComponentOne from "./ComponentOne";
+import PropDrillingExample from "./components/prop-drilling";
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
         <h1>React Test</h1>
       </header>
       <main>
-        <ComponentOne />
+        <PropDrillingExample />
       </main>
     </div>
   );
