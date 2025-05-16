@@ -1,4 +1,5 @@
 import "./App.css";
+import ContextExample from "./components/context-example";
 import PropDrillingExample from "./components/prop-drilling";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       </header>
       <main>
         <PropDrillingExample />
+        <ContextExample />
       </main>
     </div>
   );
