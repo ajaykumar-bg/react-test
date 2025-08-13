@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from "react";
 import { getDiscountedPrice } from "./utils";
 import DiscountInfo from "./DiscountInfo";
-import "./styles.css";
+import "./PriceCalculator.css";
 
 const PriceCalculator = () => {
   const [formData, setFormData] = useState({

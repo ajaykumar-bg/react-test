@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles.css";
+import "./PriceCalculator.css";
 
 const DiscountInfo = () => {
   return (

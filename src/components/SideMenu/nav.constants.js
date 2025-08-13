@@ -12,6 +12,10 @@ export const NAV_ROUTES = [
     label: "Prop Drilling",
   },
   {
+    path: "/nested-object-viewer",
+    label: "Nested Object Viewer",
+  },
+  {
     path: "/price-calculator",
     label: "Price Calculator",
   },

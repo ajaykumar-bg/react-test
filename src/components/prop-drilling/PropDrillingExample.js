@@ -1,6 +1,6 @@
 import React from "react";
 import ComponentOne from "./ComponentOne";
-import "./index.css";
+import "./PropDrillingExample.css";
 
 function PropDrillingExample() {
   return <ComponentOne />;
