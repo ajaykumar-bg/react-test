@@ -1,6 +1,8 @@
 import "./App.css";
-import ContextExample from "./components/context-example";
-import PropDrillingExample from "./components/prop-drilling";
+// import ContextExample from "./components/context-example";
+// import PropDrillingExample from "./components/prop-drilling";
+
+import PriceCalculator from "./components/price-calculator";
 
 function App() {
   return (
@@ -9,8 +11,9 @@ function App() {
         <h1>React Test</h1>
       </header>
       <main>
-        <PropDrillingExample />
-        <ContextExample />
+        {/* <PropDrillingExample />
+        <ContextExample /> */}
+        <PriceCalculator />
       </main>
     </div>
   );
