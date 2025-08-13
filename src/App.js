@@ -1,8 +1,9 @@
 import "./App.css";
+import Timer from "./components/timer/Timer";
 // import ContextExample from "./components/context-example";
 // import PropDrillingExample from "./components/prop-drilling";
 
-import PriceCalculator from "./components/price-calculator";
+// import PriceCalculator from "./components/price-calculator";
 
 function App() {
   return (
@@ -12,8 +13,9 @@ function App() {
       </header>
       <main>
         {/* <PropDrillingExample />
-        <ContextExample /> */}
-        <PriceCalculator />
+        <ContextExample />
+        <PriceCalculator /> */}
+        <Timer />
       </main>
     </div>
   );
