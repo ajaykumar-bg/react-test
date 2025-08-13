@@ -1,13 +1,12 @@
-import React, { useState } from "react";
-import { UserContext } from "./UserContext";
+import React from "react";
+import { UserProvider } from "./UserContext";
 import ComponentOne from "./ComponentOne";
 
 function ContextExample() {
-  const [user, setUser] = useState("");
   return (
-    <UserContext.Provider value={{ user, setUser }}>
+    <UserProvider>
       <ComponentOne />
-    </UserContext.Provider>
+    </UserProvider>
   );
 }
 
