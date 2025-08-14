@@ -1,57 +1,50 @@
-import React, { useState, useEffect } from "react";
-import "./Timer.css";
+import { useState, useRef, useEffect } from 'react';
+import './Timer.css'; // Assuming you have a CSS file for styling
 
 const Timer = () => {
-  const [seconds, setSeconds] = useState(0);
-  const [isRunning, setIsRunning] = useState(false);
+	const [seconds, setSeconds] = useState(0);
+	const [isRunning, setIsRunning] = useState(false);
+	const intervalRef = useRef(null);
 
-  useEffect(() => {
-    let intervalId;
+	const handleStart = () => {
+		if (!isRunning) {
+			setIsRunning(true);
+			intervalRef.current = setInterval(() => {
+				setSeconds((prev) => prev + 1);
+			}, 1000);
+		}
+	};
 
-    if (isRunning) {
-      intervalId = setInterval(() => {
-        setSeconds((prevSeconds) => prevSeconds + 1);
-      }, 1000);
-    }
+	const handlePause = () => {
+		if (isRunning) {
+			clearInterval(intervalRef.current);
+			setIsRunning(false);
+		}
+	};
 
-    return () => {
-      if (intervalId) {
-        clearInterval(intervalId);
-      }
-    };
-  }, [isRunning]);
+	const handleReset = () => {
+		setSeconds(0);
+		clearInterval(intervalRef.current);
+		setIsRunning(false);
+	};
 
-  const handleStart = () => {
-    setIsRunning(true);
-  };
+	useEffect(() => {
+		return () => clearInterval(intervalRef.current);
+	}, []);
 
-  const handlePause = () => {
-    setIsRunning(false);
-  };
-
-  const handleStop = () => {
-    setIsRunning(false);
-    setSeconds(0);
-  };
-
-  const handleReset = () => {
-    setSeconds(0);
-  };
-
-  return (
-    <div className="timer">
-      <div className="timer-display">{seconds}</div>
-      <div className="timer-controls">
-        {!isRunning ? (
-          <button onClick={handleStart}>Start</button>
-        ) : (
-          <button onClick={handlePause}>Pause</button>
-        )}
-        <button onClick={handleStop}>Stop</button>
-        <button onClick={handleReset}>Reset</button>
-      </div>
-    </div>
-  );
+	return (
+		<div className='timer'>
+			<div className='timer-display'>{seconds}</div>
+			<div className='timer-controls'>
+				{!isRunning ? (
+					<button onClick={handleStart}>Start</button>
+				) : (
+					<button onClick={handlePause}>Pause</button>
+				)}
+				<button onClick={handleReset}>Reset</button>
+			</div>
+		</div>
+	);
 };
 
 export default Timer;
