@@ -36,7 +36,7 @@ const TravelPlanForm = ({ editPlan, onSubmit, onCancel }) => {
 	};
 
 	return (
-		<form onSubmit={handleSubmit} className='travel-plan-form'>
+		<form onSubmit={handleSubmit} className='travel-plan-form' role='form'>
 			<div className='form-group'>
 				<label htmlFor='destination'>Destination:</label>
 				<input
