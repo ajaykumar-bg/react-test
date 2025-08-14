@@ -81,6 +81,12 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+@media (max-width: 768px) {
+  .list-section {
+    padding: 15px;
+  }
+}
+
 .plan-list {
   list-style: none;
   padding: 0;
@@ -93,8 +99,10 @@
   margin-bottom: 15px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   transition: transform 0.2s;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .plan-item:hover {
@@ -102,23 +110,74 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.plan-details {
+  flex: 1;
+  min-width: 200px;
+}
+
 .plan-details h3 {
   margin: 0 0 10px 0;
   color: #2c3e50;
+  font-size: 1.2rem;
 }
 
 .plan-details p {
   margin: 5px 0;
   color: #666;
+  font-size: 0.9rem;
+}
+
+.plan-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 .plan-actions button {
-  margin-left: 10px;
   padding: 8px 15px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .plan-item {
+    flex-direction: column;
+    padding: 12px;
+  }
+
+  .plan-details {
+    width: 100%;
+  }
+
+  .plan-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .plan-details h3 {
+    font-size: 1.1rem;
+  }
+
+  .plan-details p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .plan-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .plan-actions button {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+  }
 }
 
 .plan-actions button:first-child {
