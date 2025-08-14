@@ -1,7 +1,7 @@
 import { BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
 
-import SideMenu from "./components/SideMenu/SideMenu";
+import SideMenu from "./components/side-menu/SideMenu";
 
 import AppRoutes from "./AppRoutes";
 
