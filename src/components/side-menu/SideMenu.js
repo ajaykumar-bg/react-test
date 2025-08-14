@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './SideMenu.css';
 import { NAV_ROUTES } from './nav.constants';
 
-function SideMenu() {
-	const [isCollapsed, setIsCollapsed] = useState(false);
+function SideMenu(props) {
+	const { isCollapsed, onToggleCollapse } = props;
 
 	const getLinkClass = ({ isActive }) => {
 		return `nav-link ${isActive ? 'active' : ''}`;
@@ -14,7 +14,7 @@ function SideMenu() {
 		<div className={`side-menu ${isCollapsed ? 'collapsed' : ''}`}>
 			<button
 				className='collapse-btn'
-				onClick={() => setIsCollapsed(!isCollapsed)}
+				onClick={() => onToggleCollapse(!isCollapsed)}
 				aria-label={isCollapsed ? 'Expand menu' : 'Collapse menu'}
 			>
 				{isCollapsed ? '→' : '←'}

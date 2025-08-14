@@ -1,3 +1,19 @@
+.App {
+  display: flex;
+  min-height: 100vh;
+}
+
+aside {
+  flex-shrink: 0;
+}
+
 .container {
-  padding-left: 250px;
+  flex-grow: 1;
+  padding: 20px;
+  padding-left: 240px;
+  transition: padding-left 0.3s ease;
+}
+
+.container.menu-collapsed {
+  padding-left: 90px;
 }
