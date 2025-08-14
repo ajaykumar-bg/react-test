@@ -64,7 +64,10 @@ const TravelPlanner = () => {
 				<TravelPlanForm
 					editPlan={editingPlan}
 					onSubmit={handleSubmit}
-					onCancel={() => setIsModalOpen(false)}
+					onCancel={() => {
+						setIsModalOpen(false);
+						setEditingPlan(null);
+					}}
 				/>
 			</Modal>
 		</div>
