@@ -30,7 +30,7 @@
 .travel-plan-form .form-group {
   margin-bottom: 20px;
   display: grid;
-  grid-template-columns: 150px 1fr;
+  grid-template-columns: 84px 1fr;
   gap: 15px;
   align-items: start;
 }
