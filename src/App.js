@@ -9,9 +9,6 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <header>
-          <h1>React Test</h1>
-        </header>
         <aside>
           <SideMenu />
         </aside>

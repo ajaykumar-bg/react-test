@@ -11,7 +11,7 @@ function SideMenu() {
   return (
     <div className="side-menu">
       {NAV_ROUTES.map((route) => (
-        <NavLink to={route.path} className={getLinkClass}>
+        <NavLink key={route.path} to={route.path} className={getLinkClass}>
           {route.label}
         </NavLink>
       ))}

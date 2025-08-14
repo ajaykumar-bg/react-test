@@ -31,4 +31,8 @@ export const NAV_ROUTES = [
     path: "/react-portals",
     label: "React Portals",
   },
+  {
+    path: "/travel-planner",
+    label: "Travel Planner",
+  },
 ];

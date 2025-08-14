@@ -1,0 +1,26 @@
+export const DEFAULT_TRAVEL_PLANS = [
+  {
+    id: 1755172984107,
+    destination: "Maldives",
+    startDate: "2025-08-15",
+    endDate: "2025-08-20",
+    description: "Stay at Medhufushi Island Resort",
+    budget: "300000",
+  },
+  {
+    id: 1755174009369,
+    destination: "Chennai",
+    startDate: "2025-08-22",
+    endDate: "2025-08-26",
+    description: "Chennai Trip",
+    budget: "30000",
+  },
+  {
+    id: 1755174122992,
+    destination: "Bentonville",
+    startDate: "2025-08-29",
+    endDate: "2025-09-28",
+    description: "Bentonville, Arkansas",
+    budget: "200000",
+  },
+];
