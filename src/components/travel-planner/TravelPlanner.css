@@ -29,13 +29,16 @@
 
 .travel-plan-form .form-group {
   margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 15px;
+  align-items: start;
 }
 
 .travel-plan-form label {
-  display: block;
-  margin-bottom: 8px;
   color: #2c3e50;
   font-weight: 600;
+  padding-top: 10px;
 }
 
 .travel-plan-form input,
@@ -45,6 +48,7 @@
   border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 14px;
+  margin: 0;
 }
 
 .travel-plan-form textarea {
@@ -53,8 +57,8 @@
 }
 
 .travel-plan-form button[type="submit"] {
-  width: 100%;
-  padding: 12px;
+  grid-column: 2;
+  padding: 12px 24px;
   background-color: #3498db;
   color: white;
   border: none;
@@ -62,6 +66,9 @@
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s;
+  width: auto;
+  justify-self: start;
+  margin-top: 10px;
 }
 
 .travel-plan-form button[type="submit"]:hover {
@@ -154,7 +161,7 @@
   }
 }
 
-.modal-overlay {
+.T-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -172,9 +179,29 @@
   padding: 20px;
   border-radius: 8px;
   width: 90%;
-  max-width: 500px;
+  max-width: 600px;
   max-height: 90vh;
   overflow-y: auto;
+}
+
+.travel-plan-form {
+  padding: 0 15px;
+}
+
+@media (max-width: 768px) {
+  .travel-plan-form {
+    padding: 0 5px;
+  }
+  
+  .travel-plan-form .form-group {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  
+  .travel-plan-form button[type="submit"] {
+    grid-column: 1;
+    width: 100%;
+  }
 }
 
 .modal-header {
