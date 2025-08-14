@@ -10,10 +10,10 @@ aside {
 .container {
   flex-grow: 1;
   padding: 20px;
-  padding-left: 240px;
-  transition: padding-left 0.3s ease;
+  margin-left: 240px;
+  transition: margin-left 0.3s ease;
 }
 
 .container.menu-collapsed {
-  padding-left: 90px;
+  margin-left: 90px;
 }
