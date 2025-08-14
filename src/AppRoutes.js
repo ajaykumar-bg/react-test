@@ -8,6 +8,7 @@ import Timer from "./components/timer/Timer";
 import PriceCalculator from "./components/price-calculator/PriceCalculator";
 import Message from "./components/message/Message";
 import NestedObjectViewer from "./components/nested-object-viewer/NestedObjectViewer";
+import ReactPortalExample from "./components/react-portal/ReactPortalExample";
 
 function AppRoutes() {
   return (
@@ -19,6 +20,7 @@ function AppRoutes() {
       <Route path="/price-calculator" element={<PriceCalculator />} />
       <Route path="/timer-example" element={<Timer />} />
       <Route path="/message" element={<Message />} />
+      <Route path="/react-portals" element={<ReactPortalExample />} />
     </Routes>
   );
 }

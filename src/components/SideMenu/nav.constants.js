@@ -27,4 +27,8 @@ export const NAV_ROUTES = [
     path: "/message",
     label: "Message",
   },
+  {
+    path: "/react-portals",
+    label: "React Portals",
+  },
 ];
