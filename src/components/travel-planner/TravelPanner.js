@@ -2,7 +2,8 @@ import React, { useContext, useState } from 'react';
 import { TravelPlanContext } from './TravelPlanContext';
 import TravelPlanForm from './TravelPlanForm';
 import TravelPlanList from './TravelPlanList';
-import Modal from './Modal';
+import Modal from '../common/Modal/Modal';
+import Main from '../common/Main/Main';
 
 const TravelPlanner = () => {
 	const [editingPlan, setEditingPlan] = useState(null);
@@ -32,25 +33,21 @@ const TravelPlanner = () => {
 	};
 
 	return (
-		<div className='travel-planner'>
-			<h1>Travel Planner</h1>
+		<Main title='Travel Planner'>
 			<button className='add-plan-btn' onClick={() => setIsModalOpen(true)}>
 				Add New Plan
 			</button>
-
-			<div className='travel-planner-container'>
-				<div className='list-section'>
-					<TravelPlanList
-						travelPlans={travelPlans}
-						onEdit={handleEdit}
-						onDelete={deleteTravelPlan}
-					/>
-					{travelPlans.length > 0 && (
-						<button className='clear-all-btn' onClick={clearTravelPlans}>
-							Clear All Plans
-						</button>
-					)}
-				</div>
+			<div className='list-section'>
+				<TravelPlanList
+					travelPlans={travelPlans}
+					onEdit={handleEdit}
+					onDelete={deleteTravelPlan}
+				/>
+				{travelPlans.length > 0 && (
+					<button className='clear-all-btn' onClick={clearTravelPlans}>
+						Clear All Plans
+					</button>
+				)}
 			</div>
 
 			<Modal
@@ -70,7 +67,7 @@ const TravelPlanner = () => {
 					}}
 				/>
 			</Modal>
-		</div>
+		</Main>
 	);
 };
 

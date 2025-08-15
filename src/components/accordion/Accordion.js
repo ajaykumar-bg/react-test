@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Accordion.css';
+import Main from '../common/Main/Main';
 
 const Accordion = ({ items }) => {
 	const [activeIndex, setActiveIndex] = useState(null);
@@ -9,7 +10,7 @@ const Accordion = ({ items }) => {
 	};
 
 	return (
-		<div className='accordion'>
+		<Main title='Accordion'>
 			{items.map((item, index) => (
 				<div key={index} className='accordion-item'>
 					<button
@@ -37,7 +38,7 @@ const Accordion = ({ items }) => {
 					</div>
 				</div>
 			))}
-		</div>
+		</Main>
 	);
 };
 
