@@ -39,4 +39,8 @@ export const NAV_ROUTES = [
 		path: '/accordion',
 		label: 'Accordion',
 	},
+	{
+		path: '/mortgage-calculator',
+		label: 'Mortgage Calculator',
+	},
 ];

@@ -11,6 +11,7 @@ import NestedObjectViewer from './components/nested-object-viewer/NestedObjectVi
 import ReactPortalExample from './components/react-portal/ReactPortalExample';
 import TravelPlannerExample from './components/travel-planner/TravelPlannerExample';
 import AccordionExample from './components/accordion/AccordionExample';
+import MortgageCalculator from './components/mortgage-calculator/MortgageCalculator';
 
 function AppRoutes() {
 	return (
@@ -25,6 +26,7 @@ function AppRoutes() {
 			<Route path='/react-portals' element={<ReactPortalExample />} />
 			<Route path='/travel-planner' element={<TravelPlannerExample />} />
 			<Route path='/accordion' element={<AccordionExample />} />
+			<Route path='/mortgage-calculator' element={<MortgageCalculator />} />
 		</Routes>
 	);
 }
